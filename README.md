@@ -1,20 +1,27 @@
 # GhostLogin - Automated SSH Exposure and Attack
 
 ## Overview
-**GhostLogin** is a fully automated framework designed to identify exposed SSH services, validate access controls under controlled conditions, and execute predefined verification tasks without manual interaction. Built with Bash, this tool streamlines the process of network security assessments, removing the need for repetitive manual authentication testing. The entire assessment process is automated from target input to final reporting.
+**GhostLogin** is a fully automated cybersecurity framework designed to identify exposed SSH services, validate access controls under controlled conditions, and execute predefined verification tasks without manual interaction. Built entirely with Bash, this tool streamlines the process of network security assessments, removing the need for repetitive manual authentication testing. 
 
-## Features
+## 🛠️ Technologies & Tools
+* **Bash / Shell Scripting**
+* **Linux / Kali Linux**
+* **Nmap** (Network discovery and port scanning)
+* **sshpass** (Non-interactive SSH authentication)
+* **Network Security Concepts** (Brute-force testing, Post-exploitation)
+
+## 🎯 Features
 * **Network Targeting & Discovery**: Prompts the user to define the target IP address or range, confirms the target is locked, and scans specifically for active SSH services on Port 22.
 * **Automated Credential Testing**: Loads necessary exploit modules and brute-force credential dictionaries containing username and password lists to attempt brute-force logins on discovered hosts.
-* **Post-Exploitation Automation**: Automatically executes a predefined command on the remote machine non-interactively upon successful login without opening an interactive shell, such as planting a hidden proof file named `.shalev_proof`.
-* **Detailed Auditing**: Generates a local log file named `shalev_audit.log` to maintain a detailed real-time audit trail of the entire attack sequence, including failed attempts and successful system breaches.
+* **Post-Exploitation Automation**: Automatically executes a predefined command on the remote machine non-interactively upon successful login, such as planting a hidden proof file named `.shalev_proof`.
+* **Detailed Auditing**: Generates a local log file named `shalev_audit.log` to maintain a detailed real-time audit trail of the entire attack sequence.
 
-## Prerequisites
+## ⚙️ Prerequisites
 To run this script, ensure you have the following utilities installed on your Linux system:
-* `nmap` (used for active port scanning and service discovery)
-* `sshpass` (used for automated non-interactive password handling)
+* `nmap` 
+* `sshpass` 
 
-## Usage
+## 🚀 Usage
 1. Clone the repository to your local machine.
 2. Grant execution permissions to the script:
    ```bash
